@@ -13,6 +13,12 @@ const postSchema = new Schema({
     maxLength: 2000,
   },
   image: String,
+  tags: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Tag"
+    },
+  ],
 });
 
 const Post = mongoose.model("Post", postSchema);
