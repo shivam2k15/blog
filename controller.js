@@ -1,5 +1,5 @@
-const Post = require("./models/Post.model");
-const Tag = require("./models/Tag.model");
+const Post = require("./models/post.model");
+const Tag = require("./models/tag.model");
 
 const createPost = async (req, res) => {
   try {
