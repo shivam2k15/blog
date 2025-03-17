@@ -1,20 +1,15 @@
 const express = require("express");
+const app = express();
+app.use(express.json());
 const dotenv = require("dotenv");
 dotenv.config();
+require("./db")();
 
-const app = express();
+const route = require("./route");
+
 const port = process.env.PORT || 3001;
 
-app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.send("Hello Blog!");
-});
-
-app.post("/", (req, res) => {
-  res.send("Created Blog!");
-});
-
+app.use("/post", route);
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
