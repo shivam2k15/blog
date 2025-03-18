@@ -42,8 +42,16 @@ Retrieves blog posts with support for:
 - **Filtering by keyword or tag**
 - **Validation:** Returns `400 Bad Request` if invalid query keys are used. 
 - **Endpoint:** `GET /get`
+- **Query Parameters:**
+  - `sort` → (String) Field to sort by (title, desc, createdAt, etc.)
+  - `keyword` → (String) Filter posts by title or description containing the keyword.
+  - `tag` → (String) Filter posts by a specific tag.
+  - `page` → (Number) Page number for pagination (default: 1).
+  - `limit` → (Number) Number of posts per page (default: 10).
 - **Response:** 
   - `200 ok` → Returns all the posts.
+- **Example Request**
+  - `GET https://express-blog-api-kep4.onrender.com/post?sort=title&keyword=second&page=1&limit=10&tag=node` 
 
 ## ⚡ **API Design Highlights**
 
