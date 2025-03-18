@@ -1,5 +1,6 @@
 const Post = require("./models/post.model");
 const Tag = require("./models/tag.model");
+const messages = require("./constant");
 
 /**
  * @route POST /post
@@ -18,7 +19,7 @@ const createPost = async (req, res) => {
     //if not, return a 400 status code with a message
 
     if (!title || !desc || !tags || tags.length === 0) {
-      return res.status(400).json({ message: "Please fill in all fields" });
+      return res.status(400).json({ message: messages.fieldsRequired });
     }
 
     const post = await Post.create({ title, desc, image: req.file.path });
@@ -71,7 +72,7 @@ const getPosts = async (req, res) => {
     } = req.query;
 
     if (rest && Object.keys(rest).length > 0) {
-      return res.status(400).json({ message: "Invalid query parameter" });
+      return res.status(400).json({ message: messages.invalidQuery });
     }
     let query = [];
     if (keyword) {
