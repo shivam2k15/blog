@@ -21,7 +21,7 @@ Deployed live at: [**Express Blog API**](https://express-blog-api-kep4.onrender.
 
 ## 🔥 **API Endpoints**
 
-### 1️ **Create a New Post**
+### 1️⃣ **Create a New Post**
 Uploads an image, creates a blog post with `title`, `description`, and `tags`.
 
 - **Endpoint:** `POST /post`
@@ -34,7 +34,7 @@ Uploads an image, creates a blog post with `title`, `description`, and `tags`.
 - **Response:** 
   - `201 Created` → Returns the newly created post.
 
-### 2 **Get Posts with Filtering, Sorting, and Pagination**
+### 2️⃣ **Get Posts with Filtering, Sorting, and Pagination**
 Retrieves blog posts with support for:
 
 - **Sorting**
@@ -45,10 +45,11 @@ Retrieves blog posts with support for:
 - **Response:** 
   - `200 ok` → Returns all the posts.
 
-##⚡ **API Design Highlights**
--**Modular Code Structure** → Organized into routes, models, and controllers.
--**Cloudinary Integration** → For image upload and storage.
--**Mongoose Schema Validation** → Ensures data integrity.
--**Error Handling** → Proper error messages for unknown query parameters.
--**Pagination & Sorting** → Supports efficient data retrieval.
+## ⚡ **API Design Highlights**
+
+- **Modular Code Structure** → Organized into routes, models, and controllers.
+- **Cloudinary Integration** → For image upload and storage.
+- **Mongoose Schema Validation** → Ensures data integrity.
+- **Error Handling** → Proper error messages for unknown query parameters.
+- **Pagination & Sorting** → Supports efficient data retrieval.
 
