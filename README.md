@@ -41,7 +41,7 @@ Retrieves blog posts with support for:
 - **Pagination**
 - **Filtering by keyword or tag**
 - **Validation:** Returns `400 Bad Request` if invalid query keys are used. 
-- **Endpoint:** `GET /get`
+- **Endpoint:** `GET /post`
 - **Query Parameters:**
   - `sort` → (String) Field to sort by (title, desc, createdAt, etc.)
   - `keyword` → (String) Filter posts by title or description containing the keyword.
